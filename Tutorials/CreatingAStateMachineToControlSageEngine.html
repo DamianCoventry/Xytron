@@ -1,0 +1,88 @@
+<html><head>
+
+<style type="text/css">
+body {font-family: Arial}
+</style></head><body>
+<h3>Creating a State Machine to Control SageEngine</h3>
+<p>Right click on <b>State Machines</b> in <b>Game Manager</b> and choose <b>Insert</b>.  Call the State Machine
+whatever you like, I called mine <i>Main</i>.
+As soon as you click OK from the dialog box, an item is inserted into
+Game
+Manager with the name you entered, and it is selected by SageStudio.
+This causes the main view to show the State Machine editor.</p>
+<p>
+<table width="800">
+<tbody><tr><td><img src="StateMachinePopup.png"></td><td>Click on the <b>Insert</b> button on the right side of the main view.  This reveals the items
+available to insert.  Click <b>Entry Node</b> and then move the mouse cursor into the main white area of the editor and left
+click to place the Entry Node.  It doesn't matter where your place it.</td></tr>
+<tr><td></td></tr>
+</tbody></table>
+</p>
+<p>Now insert an <b>Exit Node</b> and a <b>State Node</b>.  Your State Machine should look something like the following.</p>
+<p><img src="PartiallyCompletedStateMachine0.png"></p>
+<p>Now lets connect them together.  Click the <b>Insert</b> button once again and choose <b>Event</b> from the popup menu.
+Move the mouse cursor over the Entry Node in your State Machine, and click and drag to the State Node, and release the mouse
+button.  This causes the State Machine editor to create an Event between the two Nodes.  Take note of the direction arrows
+on the event - they must point from the Entry Node to the State Node.  Now do the same for the State Node to the Exit Node. Be
+sure to drag from the State Node to the Exit Node, not the other way around.  Your State Machine should look like this:</p>
+<p><img src="PartiallyCompletedStateMachine1.png"></p>
+<p>You can move the Nodes and Events around by dragging them if you wish.  Where they are located doesn't have any effect
+on your game.</p>
+<p>Logically what our State Machine is saying to SageEngine at this stage is: When the game starts go to the <i>State2</i>
+state.  Then some event within that state will cause it to follow <i>Event5</i> and exit the application.  So it's a trivial
+state machine at the moment.</p>
+<h4>The OnBegin Event</h4>
+<p>Nothing is happening within the <i>State2</i> state, so let's change that.  Double click your State Node to show the properties dialog, shown here:</p>
+<p><img src="EmptyStateNodeProps.png"></p>
+<p>What we want to do is get SageEngine to load the map we just created, named <i>Level0</i>, when the game begins.  So the
+logical choice is to ask SageEngine to do a map load when our one and only state we've inserted begins.  We'll leave the <b>Events</b> droplist on the <b>OnBegin</b>
+event because that's the event we want to add a command to.  Press the <b>Insert</b> button to choose a command to insert.
+Change the <b>Command Type</b> droplist to <b>CellMap.Load</b>.  The dialog should look like this:</p>
+<p><img src="CommandDialog.png"></p>
+<p>Click the first <b>Click Me</b> link and choose your map from the dialog.  Click the second <b>Click Me</b> link and
+click your Resource Context, named <i>Main</i>, if you followed along correctly. Click OK and SageStudio will insert your
+command into the State, as follows:</p>
+<p><img src="LoadMap.png"></p>
+<p>This is a good start, but there's a few more things we need to do to instruct SageEngine correctly:
+<ul>
+<li>Load our Resource Context</li>
+<li>Activate the Input Bindings</li>
+<li>Set a current Camera</li>
+</ul>
+We also need to add a few commands to events other than <b>OnBegin</b>, but we'll get to that shortly.  First, let's complete
+the <b>OnBegin</b> event.  Click <b>Insert</b>, choose the <b>Bindings.Activate</b> command, click OK.  Click <b>Insert</b>, 
+choose the <b>ResCxt.Load</b> command, click <b>Click Me</b> and choose your Resource Context, then click OK.</p>
+<p>We haven't added a camera yet, so let's do that.  It only takes a few clicks of the mouse button.  Close the State Properties
+dialog by clicking OK.  Right click on <b>Cameras</b> in Game Manager, choose <b>Insert</b> and name your camera <i>Main</i>.
+Click OK.  We're done there.</p>
+<p>Left click your State Machine in Game Editor, and double click on your one and only state to
+open the State Properties dialog again.</b>  Click <b>Insert</b>, choose the command named <b>Camera.Current.Set</b>, and then
+click the <b>Click Me</b> link and choose the camera you just added, named <i>Main</i>.  Click OK.  Your State Properties
+Dialog should look like this:</p>
+<p><img src="StatePropertiesFilledIn.png"></p>
+<p>Only one last touch to do for this event: Select the <b>CellMap.Load</b> line in the list box, and move it to the bottom by using
+the <b>Move Down</b> button.  This is necessary because SageEngine must load your Resource Context before it loads the map,
+otherwise it won't find the Textures to map onto the polygons; it makes sense, they wouldn't be loaded yet.</p>
+<h4>The OnThink Event</h4>
+<p>With the State Properties Dialog still open, select the <b>OnThink</b> event from the <b>Events</b> droplist. Click <b>Insert</b>
+and choose the <b>CellMap.Think</b> command and click OK.  Your dialog should look like this:</p>
+<p><img src="OnThink.png"></p>
+<h4>The OnDraw Event</h4>
+<p>With the State Properties Dialog still open, select the <b>OnDraw</b> event from the <b>Events</b> droplist. Click <b>Insert</b>
+and choose the <b>CellMap.Draw</b> command and click OK.  Your dialog should look like this:</p>
+<p><img src="OnDraw.png"></p>
+<h4>The OnEnd Event</h4>
+<p>With the State Properties Dialog still open, select the <b>OnEnd</b> event from the <b>Events</b> droplist. Click <b>Insert</b>
+and choose the <b>CellMap.Unload</b> command and click OK.  Your dialog should look like this:</p>
+<p><img src="OnEnd.png"></p>
+<h4>The Final Step</h4>
+<p>And finally we're done with this State.  Quite a few little steps to fill in, but all necessary so that you can control
+SageEngine.  Click the OK button on the State Properties Dialog and be sure to save your game by pressing <b>Ctrl+S</b>.
+</p>
+<p>The final step we need to do before this game will run in SageEngine is to associate this State Machine with our game.
+That's really easy to do - right click on your game tree item in Game Manager and select <b>Properties</b>, choose the State
+Machine from the droplist and click OK.  Be sure to save, <b>Ctrl+S</b>.</p>
+<p><img src="GameProperties.png"></p>
+<p>Now the game will run in SageEngine. I recommend you read <a href=RunningAGame.html>Running a game</a> next.</p>
+<p>Back to the <a href="Index.html">Index</a></p>
+</body></html>

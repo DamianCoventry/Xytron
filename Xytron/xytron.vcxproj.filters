@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Weapons">
+      <UniqueIdentifier>{51a0c090-20ff-4850-b7eb-9b62f80c17e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Items">
+      <UniqueIdentifier>{c0d3b29e-037f-4c30-b24e-b07aaad1034b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemies">
+      <UniqueIdentifier>{eaf7d936-4cf3-4896-af79-7e5f9b6d79dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shots">
+      <UniqueIdentifier>{9c903808-ffd2-47b4-9143-a7769314604d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Explosions">
+      <UniqueIdentifier>{f59b8d71-08fd-4368-b8d7-974267e896c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{44a9d8a7-a4b1-43bd-a98d-a82a722f6024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{aa8eb262-da9c-4762-b05c-514ab5f72615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Status Bar">
+      <UniqueIdentifier>{3cec57be-d62d-4149-bd91-69adee43bc58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State Machine">
+      <UniqueIdentifier>{0a14c723-c1c9-4bf1-ab1b-5089668e9d02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="basicenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="boss0enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="boss1enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="boss2enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="miniboss0enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="miniboss1enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="miniboss2enemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="plasmaenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="railenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="rocketenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="sitandshootenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="sprayshootenemyentity.h">
+      <Filter>Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="xytron.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="statusbarright.h">
+      <Filter>Status Bar</Filter>
+    </ClInclude>
+    <ClInclude Include="statusbarleft.h">
+      <Filter>Status Bar</Filter>
+    </ClInclude>
+    <ClInclude Include="state.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="stategameover.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="stategamewon.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="stategetready.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="statepaused.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="statepostwave.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="statepregame.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="stateprewave.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="statewave.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="starfieldentity.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="spawnenemysparksentity.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="thousandpoints.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="pickupentity.h">
+      <Filter>Items</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="iworld.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="smallenemyexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="scatterexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="railshotexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="playerexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="plasmashotexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="nukeexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="empshotexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="basicshotexplosionentity.h">
+      <Filter>Explosions</Filter>
+    </ClInclude>
+    <ClInclude Include="basicshotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="basicshottrailentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="funkyshotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="missileshotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="missileshotexplosionentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="missileshottrailentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="nukeshotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="railshotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="cannonweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="empweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="funkyweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="laserweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="missilesweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="plasmaweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="railweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="scatterweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="helpdialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="highscoresdialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="idialogcontrol.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="ingamedialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="maindialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="optionsdialog.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="scattershotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="istatecontroller.h">
+      <Filter>Game\State Machine</Filter>
+    </ClInclude>
+    <ClInclude Include="plasmashotentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="lasershotsmallentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="lasershotlargeentity.h">
+      <Filter>Shots</Filter>
+    </ClInclude>
+    <ClInclude Include="nukeweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="iweapon.h">
+      <Filter>Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="playerentity.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="highscores.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="loadingscreen.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="basicenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="basicshotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="boss0enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="boss1enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="boss2enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="basicshotexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="empshotexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="missileshotexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="nukeexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="plasmashotexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="playerexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="railshotexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="scatterexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="smallenemyexplosionentity.cpp">
+      <Filter>Explosions</Filter>
+    </ClCompile>
+    <ClCompile Include="basicshottrailentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="funkyshotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="lasershotlargeentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="lasershotsmallentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="missileshotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="missileshottrailentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="nukeshotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="plasmashotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="railshotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="scattershotentity.cpp">
+      <Filter>Shots</Filter>
+    </ClCompile>
+    <ClCompile Include="cannonweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="empweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="funkyweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="laserweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="missilesweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="nukeweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="plasmaweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="railweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="scatterweapon.cpp">
+      <Filter>Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="helpdialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="highscoresdialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="ingamedialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="optionsdialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="entrypoint.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="highscores.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="maindialog.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="xytron.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="statusbarleft.cpp">
+      <Filter>Status Bar</Filter>
+    </ClCompile>
+    <ClCompile Include="statusbarright.cpp">
+      <Filter>Status Bar</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="stategameover.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="stategamewon.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="stategetready.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="statepaused.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="statepostwave.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="statepregame.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="stateprewave.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="statewave.cpp">
+      <Filter>Game\State Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="miniboss0enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="miniboss1enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="miniboss2enemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="plasmaenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="settings.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="starfieldentity.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="spawnenemysparksentity.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="playerentity.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="railenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="rocketenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="sitandshootenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="sprayshootenemyentity.cpp">
+      <Filter>Enemies</Filter>
+    </ClCompile>
+    <ClCompile Include="thousandpoints.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+    <ClCompile Include="pickupentity.cpp">
+      <Filter>Items</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="xytron.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

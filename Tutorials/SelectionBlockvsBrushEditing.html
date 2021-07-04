@@ -1,0 +1,76 @@
+<html>
+<head>
+<style type="text/css">
+body {font-family: Arial}
+</style></head>
+<body>
+<h3>Selection block vs brush editing</h3>
+<p>The two ways to add and remove cells from the world are using a <b>Selection Block</b> and using a <b>Brush</b>.  Both
+have their pros and cons and therefore both were added to allow the user to decide how best to create their map.</p>
+<h4>Brushes</h4>
+<p>The brush technique involves inserting a single cell at a time via the <i>brush</i> concept.  Much like painting a canvas
+in real life, this concept revolves around the idea of allowing the user to <i>pick up</i> an object and drag it over
+the world.  The object you pick up, is called a brush.  The brushes available in SageStudio are as follows:</p>
+<ul>
+<li>Select</li>
+<li>Solid Space</li>
+<li>Normal</li>
+<li>Secret</li>
+<li>Pit</li>
+<li>Liquid</li>
+<li>Door</li>
+<li>Secret Door</li>
+<li>Translucent Door</li>
+<li>Translucent Small Wall</li>
+<li>Translucent Large Wall</li>
+</ul>
+<p>The Select brush is the odd one out, and is covered next in the <b>Selection Blocks</b> section.  Every other brush
+adds or removes a type of cell to/from the world as you click and drag your mouse cursor over the editing window.</p>
+<p>To edit your map via the brush technique, <b>left click</b> on a map in the <b>Game Manager</b> and choose <b>Cell</b>
+from the <b>Edit Mode</b> droplist towards the top of the Map Window.  The <b>Current Brush</b> droplist on the right
+docked dialog bar controls which brush you're currently <i>holding</i>.  Each brush type is covered next, except for
+the Select brush, which is in the following section.</p>
+<table border=1>
+<tr><td><img src=SolidSpaceBrush.png /></td><td><b>Solid Space Brush</b><br />This brush <i>removes</i> cells from the world</td></tr>
+<tr><td><img src=NormalBrush.png /></td><td><b>Normal</b><br />The ubiquitous normal cell that forms the basis of every room and hallway is created by this Brush.  This cell has four walls, a ceiling and a floor and the player can pass through it without obstruction. Wall polygons are removed when this cell is placed next to another cell.</td></tr>
+<tr><td><img src=SecretBrush.png /></td><td><b>Secret</b><br />This brush inserts Secret cells, that are identical to Normal cells except they're <i>flagged</i> as secret and not drawn on the player's map until discovered by the player.</td></tr>
+<tr><td><img src=PitBrush.png /></td><td><b>Pit</b><br />This brush inserts cells that have a floor 10 cells deep.  If a player walks into this cell they will drop to their death.</td></tr>
+<tr><td><img src=LiquidBrush.png /></td><td><b>Liquid</b><br />This cell is one cell deep and filled with liquid; typically water but it can be any liquid if you change the liquid texture and color.  The player's viscosity is modified when travelling through this cell, and buoyancy is simulated by SageEngine.  The player cannot hold their breath forever if fully submerged in the liquid, and will drown if they're not careful.</td></tr>
+<tr><td><img src=DoorBrush.png /></td><td><b>Door</b><br />A basic door cell is inserted by this brush.  The player cannot travel through this cell until they use their <b>action</b> key to open the door.  The door raises upwards and the player may move through afterwards.  This cell adopts the textures of its neighbouring cells for its walls, ceiling and floor.  However the door texture can be set explicitly.</td></tr>
+<tr><td><img src=SecretDoorBrush.png /></td><td><b>Secret Door</b><br />This brush inserts a Secret Door, which is a door that fills the entire cell and is not drawn on the player's map until discovered. This door itself adopts the textures of its neighbouring cells so that you can't tell it's there.  The player must use their <b>action</b> key on the door to discover its presence.</td></tr>
+<tr><td><img src=TranslucentDoorBrush.png /></td><td><b>Translucent Door</b><br />This brush inserts a Translucent Door, which is exactly the same as a normal door, except that you can see through it.</td></tr>
+<tr><td><img src=TranslucentSmallWallBrush.png /></td><td><b>Translucent Small Wall</b><br />This brush inserts an <i>internal wall</i>, which is a wall that passes through the middle of the cell.  A player cannot pass through this cell.  The cell has a small window in it that is translucent.  The window's glass can be destroyed with the <b>action</b> key. This cell adopts the textures of its neighbouring cells for its walls, ceiling and floor.  However the window texture can be set explicitly.</td></tr>
+<tr><td><img src=TranslucentLargeWallBrush.png /></td><td><b>Translucent Large Wall</b><br />This brush inserts an <i>internal wall</i> that is similar to the small translucent wall. The differences are that the window fills the entire cell, and once destroyed with the <b>action</b> key, the player can pass through this cell.</td></tr>
+</table>
+<p>Here's a simple example of creating a map with 3 rooms and 3 doors.  For variety, pit and liquid cells were added.  This
+was done by selecting the appropriate cell brush and <b>left clicking</b> in the editor window, and <b>dragging the cursor</b>
+across the window.  If a mistake was made, the <b>solid space</b> brush was used to <i>remove</i> cells from the world, using
+the similar click and drag technique.</p>
+<p><img src=ExampleMap.png /></p>
+<h4>Selection Blocks</h4>
+<p>Selection Blocks provide a convenient way to insert many cells at once.  Choose the <b>select</b> brush from the <b>Current Brush</b>
+droplist on the right docked dialog bar.  To create a selection block <b>left click</b> on the editor window and <b>drag the
+cursor</b> across the window, as shown here:</p>
+<p><img src=SelectionBlock.png /></p>
+<p>Another way to create the same Selection Block is to <b>left click</b> once on your map, then move the mouse cursor to
+another part of you map, and <b>press and hold either shift key</b> and <b>left click</b> the mouse button again.  This achieves
+exactly the same thing as the <b>click and drag</b> technique.</p>
+<p>Another feature of the Selection Block mechanism is that you can <i>add and remove</i> cells from
+Selection Blocks using by <b>pressing and holding either control key</b> and <b>left clicking</b> on the map.  This next screen shot
+shows a Selection Block that's been modified by multiple <b>control left clicks</b>:</p>
+<p><img src=SelectionBlockModified.png /></p>
+<p>The final feature with Selection Blocks is that you can <b>control left click drag</b> to <i>add</i> to a selection block.  That is,
+<b>left click and drag</b> across the map to create a Selection Block.  Next, <b>press and hold either control key</b>, then
+<b>left click and drag</b> across the map to <i>add</i> another dragged set of cells to your Selection Block.  The results
+of this technique is shown here:</p>
+<p><img src=SelectionBlockModifiedAgain.png /></p>
+<p>Once you've created a Selection Block, you may apply a brush to every cell in the selection.  This is achieved by clicking
+the button <b>Set Cell Type</b> on the right docked dialog bar, and then double clicking a cell type from the <b>Choose Cell Type</b>
+dialog box.  Notice that you can choose the <b>Solid Space</b> brush from this dialog box too, which means you can remove
+entire blocks of cells from the world in one go.</p>
+<p>Using the <b>Set Texture Set</b> button can be used also to apply a texture set to the Selection Block too, which is
+also another great way to speed up Texture Set assignment.</p>
+<p>It is recommended that you read the <a href=MovingAroundTheMap.html>Moving around the map</a> tutorial next.</p>
+<p>Back to the <a href="Index.html">Index</a></p>
+</body>
+</html>

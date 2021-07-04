@@ -1,0 +1,2 @@
+#include "cameradocument.h"
+

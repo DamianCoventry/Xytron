@@ -1,0 +1,71 @@
+Game.Name = "PenguinShooter"
+Game.StateMachine = "Main"
+Game.ClearBackBuffer = False
+StateMachine["Main"].EntryNodes[1].Position = (392,137)
+StateMachine["Main"].ExitNodes[2].Position = (328,566)
+StateMachine["Main"].StateNodes[3].Position = (385,338)
+StateMachine["Main"].StateNodes[3].Name = "State3"
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnBegin"] =
+{
+Bindings.Activate
+Camera.Current.Set "Main"
+ResCxt.Load "Main"
+CellMap.Load "Level0" "Main"
+}
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnDraw"] =
+{
+CellMap.Draw
+}
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnEnd"] =
+{
+CellMap.Unload
+}
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnMove"] =
+{
+}
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnThink"] =
+{
+CellMap.Think
+}
+StateMachine["Main"].StateNodes[3].CommandLineSet["OnTimer"] =
+{
+}
+StateMachine["Main"].EventNodes[4].Position = (389,237)
+StateMachine["Main"].EventNodes[4].Name = ""
+StateMachine["Main"].EventNodes[4].SourceNode.Id = 1
+StateMachine["Main"].EventNodes[4].DestNode.Id = 3
+StateMachine["Main"].EventNodes[5].Position = (357,452)
+StateMachine["Main"].EventNodes[5].Name = ""
+StateMachine["Main"].EventNodes[5].SourceNode.Id = 3
+StateMachine["Main"].EventNodes[5].DestNode.Id = 2
+ResourceContext["Main"] = (Texture:"Dirt15a.tga",Texture:"Dirt1a.tga",Texture:"Rock0a.tga",Texture:"Rock10a.tga",Texture:"Rock11a.tga",Texture:"Sand0a.tga",Texture:"Sand10a.tga",Texture:"Sand1a.tga",Texture:"Stone11a.tga",Texture:"Stone14a.tga",Texture:"Water2a.tga",Texture:"Water4a.tga",Texture:"Water7a.tga",Texture:"Water8a.tga")
+CellMap[0] = "Level0"
+Camera["Main"].Position = (0,0,0)
+Camera["Main"].Rotation = (0,0,0)
+TextureSet["Rock0"].ResCxt = "Main"
+TextureSet["Rock0"].TexWall = "Rock0a.tga"
+TextureSet["Rock0"].TexCeiling = "Rock10a.tga"
+TextureSet["Rock0"].TexFloor = "Rock11a.tga"
+TextureSet["Rock0"].TexLiquid = "Water8a.tga"
+TextureSet["Rock0"].TexDoor = "Dirt15a.tga"
+TextureSet["Rock0"].TexTransWall = "Water4a.tga"
+TextureSet["Rock0"].TexTransDoor = "Water4a.tga"
+TextureSet["Rock0"].LiquidColor = (0,0,0)
+TextureSet["Sand0"].ResCxt = "Main"
+TextureSet["Sand0"].TexWall = "Sand0a.tga"
+TextureSet["Sand0"].TexCeiling = "Sand10a.tga"
+TextureSet["Sand0"].TexFloor = "Sand1a.tga"
+TextureSet["Sand0"].TexLiquid = "Water7a.tga"
+TextureSet["Sand0"].TexDoor = "Dirt1a.tga"
+TextureSet["Sand0"].TexTransWall = "Water4a.tga"
+TextureSet["Sand0"].TexTransDoor = "Water4a.tga"
+TextureSet["Sand0"].LiquidColor = (0,0,0)
+TextureSet["Stone0"].ResCxt = "Main"
+TextureSet["Stone0"].TexWall = "Stone11a.tga"
+TextureSet["Stone0"].TexCeiling = "Stone11a.tga"
+TextureSet["Stone0"].TexFloor = "Stone14a.tga"
+TextureSet["Stone0"].TexLiquid = "Water2a.tga"
+TextureSet["Stone0"].TexDoor = "Dirt1a.tga"
+TextureSet["Stone0"].TexTransWall = "Water4a.tga"
+TextureSet["Stone0"].TexTransDoor = "Water4a.tga"
+TextureSet["Stone0"].LiquidColor = (0,0,0)

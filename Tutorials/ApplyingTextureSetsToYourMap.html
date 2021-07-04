@@ -1,0 +1,45 @@
+<html>
+<head>
+<style type="text/css">
+body {font-family: Arial}
+</style></head>
+<body>
+<h3>Applying texture sets to your map</h3>
+<p>Applying Texture Sets to your map is done using the <b>Brush</b> technique and the <b>Selection Block</b> technique.  For
+information on how these work see the <a href=SelectionBlockvsBrushEditing.html>Selection block vs brush editing</a> tutorial.
+The same principals apply to Texture Set assignment as they do to Cell insertion and removal.</p>
+<p>The user must create Texture Sets before they can be applied to the map.  How to do this is covered in the
+<a href=BasicMapCreation.html>Basic Map Creation</a> tutorial.</p>
+<p>With some Texture Sets created, choose the <b>Texture Set</b> item from the <b>Edit Mode</b> droplist towards the top
+of the <b>Cell Map Editor</b> window.</p>
+<p>The Texture Set dialog bar will be shown docked to the right side of the <b>Cell Map Editor</b>.  It appears as follows when the <b>Current Brush</b>
+is set to <b>Select</b>:</p>
+<p><img src=TextureSetDialogBar.png /></p>
+<p>The <b>Default Texture Set</b> droplist controls which Texture Set is used when you insert new cells into the map.  Changing the <b>Current Brush</b>
+droplist item will cause the Texture Set dialog bar to change which controls appear inside it.  This will be covered below.</p>
+<h4>Texture Set assignment via Selection Blocks</h4>
+<p>With the <b>Current Brush</b> droplist set to <b>Select</b>, you may create a Selection Block in the map editor window that
+encompasses one or more cells of your map.
+Check the <a href=SelectionBlockvsBrushEditing.html>Selection block vs brush editing</a> tutorial if you're not sure how to do this.
+Once created, click the <b>Set Texture Set</b> button and choose one of the Texture Sets.  Shown here is the before
+and after of assigning a Texture Set named <i>Grass0</i> to a Selection Block:</p>
+<p><img src=SelBlockAssignBefore.png /><img src=SelBlockAssignAfter.png /></p>
+<p><img src=SelBlockAssignZoomAndRotate.png /></p>
+<h4>Texture Set assignment via Brushes</h4>
+<p>To apply Texture Sets via the Brush technique change the <b>Current Brush</b> on the Texture Set dialog bar to <b>Apply</b>,
+shown here:</p>
+<p><img src=TextureSetDialogBarApply.png /></p>
+<p>Choose any Texture Set from the list box, and <b>left click and drag</b> on cells in the map to apply the Texture Set.
+You'll notice door cells and internal wall cells adopt the texture set you apply if you apply it to the cell next to them.
+Door cells are considered to be Normal Doors, Secret Doors and Translucent doors.  Internal Wall cells are considered to
+be Translucent Small Walls and Translucent Large Walls.</p>
+<p>Shown next is a Texture Set named <i>Sand0</i> being applied to a map:</p>
+<p><table border=1>
+<tr><td><img src=TextureSetSand0Application0.png /></td><td>Left mouse button clicked and held.</td></tr>
+<tr><td><img src=TextureSetSand0Application1.png /></td><td>Mouse cursor dragged to the right and released.</td></tr>
+<tr><td><img src=TextureSetSand0Application2.png /></td><td>The rest of the non-liquid part of the room is painted.</td></tr>
+<tr><td><img src=TextureSetSand0Application3.png /></td><td>Zoomed out and painted all of the liquid part of the room.</td></tr>
+</table></p>
+<p>Back to the <a href="Index.html">Index</a></p>
+</body>
+</html>

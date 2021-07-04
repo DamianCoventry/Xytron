@@ -1,0 +1,51 @@
+<html><head>
+
+<style type="text/css">
+body {font-family: Arial}
+</style></head><body>
+<h3>Basic Map Creation</h3>
+<p>To create a map right click on <b>Cell Map</b> and click <b>Insert</b>.  Call your
+map whatever you like, I called mine <i>Level0</i>.  Once you click OK from the dialog a map with the name you entered
+will be inserted into the tree and selected.  This causes the main view to change to the <b>Cell Map Editor</b>, shown here:</p>
+<p><img src="CellMapEditor.png"></p>
+<p>We'll create our map using the <b>Brush</b> technique.  Change the <b>Current Brush</b> drop list on the right hand side
+dialog bar to <b>Normal</b>.  Now drag the mouse cursor in the main 3D view to place cells of type <b>Normal.</b>  Here's
+what I created:</p>
+<p><img src="NoTexSet.png"></p>
+<p>You'll immediately notice that a checkerboard Texture was applied to your cells.  This happened because no Texture
+Sets exist yet, so SageStudio used the Default Texture.  Let's create a Texture Set and apply it to our cells.  Before we
+can do that however, we must create a <b>Resource Context</b>, because this is the container that holds the Textures used
+by a Texture Set.</p>
+<p>From the Game Manager, right click on <b>Resource Contexts</b> and click <b>Insert</b>.  Call your Resource Context <i>Main</i>
+and press <b>Enter</b>.</p>
+<p>Now right click on <b>Texture Sets</b> in Game Manager and click <b>Insert</b>.  Type <b>Rock0</b> for the name.  You'll
+notice that your Resource Context is selected in the droplist.  This is because it's the only one you have at the moment.
+Press <b>Enter</b> to accept the dialog.  The <b>Texture Set Editor</b> is displayed in the main view.</p>
+<p><img src="TextureSetEditor.png"></p>
+<p>This editor will allow you to assign a Texture to each <i>type</i> of polygon that SageStudio will create for your cells.
+Double click the listbox item named <b>Wall</b> to open the <b>Choose Texture</b> dialog, shown here:</p>
+<p><img src="ChooseTextureDialog.png"></p>
+<p>This dialog lists all the Textures from your Content Directory's subdirectory named Textures.  Double click any Texture
+to assign that Texture to the <b>Wall</b> polygon type.  Double click every other polygon type and assign Textures.  Your
+Texture Set should look something like this:</p>
+<p><img src="AllTexturesAssigned.png"></p>
+<p>From the Game Manager, left click on your Resource Context named <b>Main</b>.  It should look something like the following:</p>
+<p><img src="ResourceContextFilledIn.png"></p>
+<p>You'll notice that some Textures have been added to your Resource Context.  When you assigned Textures in your Texture Set,
+SageStudio automatically placed them into your Resource Context for you.  Now left click your map named <b>Level0</b> from the
+Game Manager.  We'll now use our newly created Texture Set to paint our map cells.</p>
+<p>Change the <b>Edit Mode</b> droplist at the top of the main view to <b>Texture Set</b>.  Change the <b>Current Brush</b>
+droplist to <b>Apply</b>.  Select your Texture Set named <b>Rock0</b> from the list.  You may now drag the mouse cursor
+over the cells in your world to apply <i>Rock0</i> to them.  You should have something like this:</p>
+<p><img src="PaintedCells.png"></p>
+<p>Let's save the game now.  Choose <b>Save</b> from the <b>File</b> menu, or press <b>Ctrl+S</b>.</p>
+<p><strong><i>It is very important to save your game in the Games subdirectory</i></strong>, shown here:</p>
+<p><img src="SaveDialog.png"></p>
+<p>You'll notice that SageStudio filled in the name of the file for you, which is <i>PenguinShooter</i> in my case, so just
+hit <b>Enter</b> to save the file.  SageStudio updates the title bar of the main window to reflect your game's filename.</p>
+<p><img src="TitleBar.png"></p>
+<p>That's your basic map done.  In order for SageEngine to run your map, you need to create a State Machine that tells 
+SageEngine what to do.  Specifically, you need to tell SageEngine to run a map, and tell it which map that is.  This is pretty
+easy to do, read about it in <a href="CreatingAStateMachineToControlSageEngine.html">Creating a State Machine to Control SageEngine</a></p>
+<p>Back to the <a href="Index.html">Index</a></p>
+</body></html>
