@@ -1,7 +1,0 @@
-KEY_D Camera.Move.Backward
-KEY_E Camera.Move.Forward
-KEY_F Camera.Move.Right
-KEY_S Camera.Move.Left
-KEY_SPACE Camera.Move.Up
-KEY_Z Camera.Move.Down
-MSE_MOVE Camera.Look

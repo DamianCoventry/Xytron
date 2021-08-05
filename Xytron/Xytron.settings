@@ -1,4 +1,4 @@
-FullScreenGraphics = True
+FullScreenGraphics = False
 SoundEnabled = True
 MusicEnabled = True
 SoundVolume = 82
